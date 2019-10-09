@@ -7,7 +7,7 @@ module.exports = {
         const booking = await Booking.findById(booking_id).populate('spot');
 
         booking.approved = true;
-
+        
         await booking.save();
 
         return res.json(booking);
